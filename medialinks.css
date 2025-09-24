@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* background image */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.responsiveclassroom.org/wp-content/uploads/2016/04/DSC_2388-1024x682.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* wrapper keeps heading + box together */
+.content-wrapper {
+    position: fixed;
+    top: 38%;               /* center whole block */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+/* heading with its own mini black box */
+h2 {
+    font-size: 30px;
+    color: white;
+    background: rgb(24, 24, 24);
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;    /* space above the black box */
+}
+
+/* black background for links/text */
+.changeable-box {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    padding: 20px 40px;
+    width: max-content;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* instagram link */
+.instagram {
+    font-size: 29px;
+    background: linear-gradient(to right, rgb(255, 0, 0), orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* classroom link */
+.classroom {
+    font-size: 29px;
+    color: gold;
+}
+
+/* classroom code */
+.classroom-code {
+    font-size: 20px;
+    color: gold;
+}
+
+/* participate text */
+.participate {
+    font-size: 29px;
+    color: red;
+}
+
+/* return link */
+.return {
+    font-size: 20px;
+    color: lightblue;
+}
+
+/* make icons line up */
+.icon {
+    vertical-align: middle;
+    height: 70px;
+    width: 70px;
+}

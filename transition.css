@@ -1,0 +1,38 @@
+/* Simple fade overlay */
+#page-transition {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  opacity: 1;
+  /* start covered so first load will fade */
+  pointer-events: auto;
+  transition: opacity 0.8s ease-in-out;
+  /* default (used by fade-out) */
+}
+
+/* Reveal page when ready */
+#page-transition.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+  /* quick reveal */
+}
+
+/* Cover page when leaving */
+#page-transition.fade-in {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 3s ease-in-out;
+  /* slow 2–4s cover; tweak to taste */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  #page-transition,
+  #page-transition.fade-out,
+  #page-transition.fade-in {
+    transition: none !important;
+  }
+}
